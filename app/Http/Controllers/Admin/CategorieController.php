@@ -1,20 +1,29 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Categorie;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\Controller;
+use Bitfumes\Multiauth\Model\Admin;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Validator;
+
 class CategorieController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    use AuthorizesRequests;
+
+    public function __construct(){
+        $this->middleware('auth:admin');
+        $this->middleware('role:super', ['only'=>'show']);
+        $this->adminModel = config('multiauth.models.admin');
+    }
+
     public function index()
     {
-        //
+        $categories = Categorie::all();
+        return view('multiauth::admin.categorie.index')->with('categories', $categories);
     }
 
     /**
@@ -24,7 +33,7 @@ class CategorieController extends Controller
      */
     public function create()
     {
-        //
+        return view('multiauth::admin.categorie.create');
     }
 
     /**
@@ -35,7 +44,31 @@ class CategorieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        
+
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            
+        ])->validate();
+
+        $extension = $request->icon->extension();
+        $request->icon->storeAs('/public', $validated['name'].".".$extension);
+        $url = Storage::url($validated['name'].".".$extension);
+            $file = File::create([
+                'name' => $validated['name'],
+                'url' => $url,
+            ]);
+
+
+       $categorie = new Categorie;
+       $categorie->name = $request->input('name');
+       $categorie->description = $request->input('description');
+       $categorie->parent = $request->input('parent');
+       $categorie->icon = $request->input('icon');
+       $categorie->save();
+
+       return redirect('/admin/categorie')->with('Success', 'categorie Created');
     }
 
     /**

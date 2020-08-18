@@ -1,5 +1,6 @@
 <?php
 
+
     Route::GET('/home', 'AdminController@index')->name('admin.dashboard.home');
     // Login and Logout
     Route::GET('/', 'LoginController@showLoginForm')->name('admin.login');

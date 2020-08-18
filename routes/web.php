@@ -25,4 +25,9 @@ Route::get('/services', 'PagesController@services');
 Route::get('/vendor', 'PagesController@vendor');
 
 
-Route::resource('post', 'Admin\PostController');
+//Admin Routes
+Route::resource('/admin/post', 'Admin\PostController');
+Route::resource('/admin/vendor', 'Admin\VendorController');
+Route::resource('/admin/service', 'Admin\ServiceController');
+Route::resource('/admin/categorie', 'Admin\CategorieController');
+Route::resource('/admin/upload', 'Admin\UploadController');

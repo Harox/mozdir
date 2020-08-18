@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Bitfumes\Multiauth\Model\Admin;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Post;
 
 class PostController extends Controller
 {
@@ -34,7 +35,8 @@ class PostController extends Controller
 
     public function index()
     {
-        return view('multiauth::admin.dashboard.home');
+        $posts = Post::all();
+        return view('multiauth::admin.post.index')->with('posts', $posts);
     }
 
     /**
@@ -66,7 +68,8 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return view('multiauth::admin.post.show')->with('post', $post);
     }
 
     /**

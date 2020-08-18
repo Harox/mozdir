@@ -21,6 +21,7 @@
     <link href="{{ asset('assets/plugins/chartist-js/dist/chartist-init.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/css-chart/css-chart.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/html5-editor/bootstrap-wysihtml5.css') }}" rel="stylesheet">
 
     <!-- Vector CSS -->
     <link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
@@ -45,13 +46,22 @@
         @include('vendor.multiauth.admin.inc.sidebar')
 
         <main class="py-4">
+            
             @yield('content')
         </main>
+
+        <footer class="footer"> © 2020 Mozambique Business Directory </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+
     </div>
 
     <!-- All Jquery -->
     <!-- ============================================================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> 
+
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}" defer></script>
+    
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}" defer></script>
@@ -84,6 +94,36 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="{{ asset('assets/plugins/styleswitcher/jQuery.style.switcher.js') }}" defer></script>
+    
+    <script src="{{ asset('assets/plugins/tinymce/tinymce.min.js') }}" defer></script>
+
+  
+    <!-- icheck -->
+    <script src="{{ asset('assets/plugins/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/icheck/icheck.init.js') }}"></script>
+
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>  --}}
+    
+
+    <script>
+    $(document).ready(function() {
+
+        if ($("#mymce").length > 0) {
+            tinymce.init({
+                selector: "textarea#mymce",
+                theme: "modern",
+                height: 300,
+                plugins: [
+                    "advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker",
+                    "searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking",
+                    "save table contextmenu directionality emoticons template paste textcolor"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      ink image | print preview media fullpage | forecolor backcolor emoticons",
+
+            });
+        }
+    });
+    </script>
 
 </body>
 

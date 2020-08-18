@@ -1,20 +1,32 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Service;
 use Illuminate\Http\Request;
 
+use App\Http\Controllers\Controller;
+use Bitfumes\Multiauth\Model\Admin;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Support\Facades\Validator;
+
 class ServiceController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    use AuthorizesRequests;
+
+    public function __construct(){
+        $this->middleware('auth:admin');
+        $this->middleware('role:super', ['only'=>'show']);
+        $this->adminModel = config('multiauth.models.admin');
+    }
+
+
     public function index()
     {
-        //
+        $services = Service::all();
+        return view('multiauth::admin.service.index')->with('services', $services);
+
+        
     }
 
     /**
