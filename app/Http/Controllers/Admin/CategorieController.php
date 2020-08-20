@@ -22,7 +22,7 @@ class CategorieController extends Controller
 
     public function index()
     {
-        $categories = Categorie::all();
+        $categories = Categorie::orderBy('id','asc')->get();
         return view('multiauth::admin.categorie.index')->with('categories', $categories);
     }
 
@@ -31,9 +31,9 @@ class CategorieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        return view('multiauth::admin.categorie.create');
+    public function create(){
+        $categories = Categorie::orderBy('id','asc')->get();
+        return view('multiauth::admin.categorie.create')->with('categories', $categories);
     }
 
     /**

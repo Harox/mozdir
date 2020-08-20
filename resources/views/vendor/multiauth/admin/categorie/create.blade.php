@@ -23,7 +23,7 @@
         @include('vendor.multiauth.admin.inc.header')
         <div class="row">
 
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Geral</h4>
@@ -56,18 +56,20 @@
                                     <div class="input-group">
                                         <div class="input-group-addon"><i class="ti-user"></i></div>
                                         <select class="custom-select col-sm-9" id="parent" name="parent">
-                                            <option selected="">Choose...</option>
-                                            <option value="1">One</option>
-                                            <option value="2">Two</option>
-                                            <option value="3">Three</option>
+                                            @if(count($categories) > 0)
+                                                @foreach($categories as $categorie)
+                                                
+                                                    <option selected="">{{$categorie->name}}</option>
+                                                    
+                                                @endforeach
+                                            @endif
                                         </select>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label for="image">Choose Image</label>
-                                <input type="file" accept="image/*" name="image" id="image" class="image">
+                            <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Contact Image</span>
+                                <input type="file" accept="image/*" name="image" id="image" class="upload">
                             </div>
 
 
@@ -80,27 +82,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="card-title">Select Icon</h4>
-                        <h6 class="card-subtitle"></h6>
-                        <form class="form-horizontal p-t-20">
-
-                            <div class="row">
-
-
-
-                            <div class="form-group row m-b-0">
-                                <div class="offset-sm-3 col-sm-9 ">
-                                    {{-- <button type="submit" class="btn btn-info waves-effect waves-light">Sign in</button> --}}
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
 
 
         <!-- Row -->

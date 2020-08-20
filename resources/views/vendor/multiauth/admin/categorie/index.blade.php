@@ -29,6 +29,7 @@
                                                                 <div class="modal-dialog">
                                                                     <div class="modal-content">
                                                                         <div class="modal-header">
+                                                                            @include('vendor.multiauth.admin.inc.message')
                                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                                                                             <h4 class="modal-title" id="myModalLabel">Add New Category</h4> </div>
                                                                         <div class="modal-body">
@@ -42,19 +43,23 @@
                                                                                     </div>
                                                                                     <div class="col-md-12 m-b-20">
                                                                                         <select class="custom-select col-sm-9" id="parent" name="parent">
-                                                                                            <option selected="">Choose Parent...</option>
-                                                                                            <option value="1">One</option>
-                                                                                            <option value="2">Two</option>
-                                                                                            <option value="3">Three</option>
+                                                                                            @if(count($categories) > 0)
+                                                                                                @foreach($categories as $categorie)
+                                                                                                
+                                                                                                    <option selected="">{{$categorie->name}}</option>
+                                                                                                    
+                                                                                                @endforeach
+                                                                                            @endif
                                                                                         </select> </div>
                                                                                     
                                                                                     <div class="col-md-12 m-b-20">
                                                                                         <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Category Image</span>
-                                                                                            <input type="file" class="upload"> </div>
+                                                                                            <input type="file" accept="image/*" name="image" id="image" class="upload">
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="modal-footer">
-                                                                                    <button type="button" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
+                                                                                    <button type="submit" class="btn btn-info waves-effect" data-dismiss="modal">Save</button>
                                                                                     <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cancel</button>
                                                                                 </div>
                                                                             </from>

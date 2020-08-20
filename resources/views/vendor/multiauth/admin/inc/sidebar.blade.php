@@ -17,7 +17,7 @@
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
                 <li class="nav-small-cap">PERSONAL</li>
-                <li> <a class="waves-effect waves-dark" href="/" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
+                <li> <a class="waves-effect waves-dark" href="" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="/service" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">Services</span></a>
                     <ul aria-expanded="false" class="collapse">
