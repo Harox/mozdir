@@ -9,9 +9,9 @@
     <!-- ============================================================== -->
     <div class="container-fluid">
         <!-- ============================================================== -->
-        <!-- Bread crumb and right sidebar toggle -->
+        <!-- Bread crumb and right sidebar bb toggle -->
         <!-- ============================================================== -->
-        
+
         <!-- ============================================================== -->
         <!-- End Bread crumb and right sidebar toggle -->
         <!-- ============================================================== -->
@@ -22,14 +22,14 @@
         @include('vendor.multiauth.admin.inc.message')
         @include('vendor.multiauth.admin.inc.header')
         <div class="row">
-            
+
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Geral</h4>
                         <form class="form-horizontal p-t-20" method="POST" role="form" action="{{ action('Admin\CategorieController@store')}}">
                             @csrf
-                            
+
                             <div class="form-group row">
                                 <label for="exampleInputuname3" class="col-sm-3 control-label">Name</label>
                                 <div class="col-sm-9">
@@ -69,7 +69,7 @@
                                 <label for="image">Choose Image</label>
                                 <input id="icon" type="file" name="icon">
                             </div>
-                            
+
 
                             <div class="form-group row m-b-0">
                                 <div class="offset-sm-3 col-sm-9">
@@ -88,7 +88,7 @@
                         <form class="form-horizontal p-t-20">
 
                             <div class="row">
-                                
+
 
 
                             <div class="form-group row m-b-0">
@@ -101,8 +101,8 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <!-- Row -->
         <!-- ============================================================== -->
         <!-- End PAge Content -->
@@ -110,14 +110,14 @@
         <!-- ============================================================== -->
         <!-- Right sidebar -->
         <!-- ============================================================== -->
-        
+
         <!-- ============================================================== -->
     </div>
     <!-- ============================================================== -->
     <!-- End Container fluid  -->
     <!-- ============================================================== -->
     <!-- ============================================================== -->
-    
+
     <!-- ============================================================== -->
 </div>
 
