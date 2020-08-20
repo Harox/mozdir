@@ -27,7 +27,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">Geral</h4>
-                        <form class="form-horizontal p-t-20" method="POST" role="form" action="{{ action('Admin\CategorieController@store')}}">
+                        <form class="form-horizontal p-t-20" method="POST" role="form" action="{{ action('Admin\CategorieController@store')}}" enctype="multipart/form-data">
                             @csrf
 
                             <div class="form-group row">
@@ -67,7 +67,7 @@
 
                             <div class="form-group">
                                 <label for="image">Choose Image</label>
-                                <input id="icon" type="file" name="icon">
+                                <input type="file" accept="image/*" name="image" id="image" class="image">
                             </div>
 
 

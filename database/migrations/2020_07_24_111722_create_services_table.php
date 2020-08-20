@@ -17,7 +17,6 @@ class CreateServicesTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->string('category', 100);
-            $table->enum('category', ['male', 'female', 'other'])->nullable();
             $table->date('birthday')->nullable();
             $table->string('phone');
             $table->string('address')->nullable();

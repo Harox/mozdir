@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
 use Bitfumes\Multiauth\Model\Admin;
+use Dotenv\Validator;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use Illuminate\Support\Facades\Validator;
 
 class CategorieController extends Controller
 {
@@ -45,38 +45,48 @@ class CategorieController extends Controller
     public function store(Request $request)
     {
 
-        
-
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            
-        ])->validate();
-
-        $extension = $request->icon->extension();
-        $request->icon->storeAs('/public', $validated['name'].".".$extension);
-        $url = Storage::url($validated['name'].".".$extension);
-            $file = File::create([
-                'name' => $validated['name'],
-                'url' => $url,
-            ]);
 
 
-       $categorie = new Categorie;
-       $categorie->name = $request->input('name');
-       $categorie->description = $request->input('description');
-       $categorie->parent = $request->input('parent');
-       $categorie->icon = $request->input('icon');
-       $categorie->save();
+        // $validator = Validator::make($request->all(), [
+        //     'name' => 'required',
+        //     'icon' => 'required',
 
-       return redirect('/admin/categorie')->with('Success', 'categorie Created');
+        // ])->validate();
+
+
+                $nameFile = 'noImage.jpg';
+
+            // Verifica se informou o arquivo e se é válido
+                if ($request->hasFile('image') && $request->file('image')->isValid()) {
+
+                    $genName = uniqid(date('HisYmd'));
+                    $extension = $request->image->extension();
+                    $nameFile = "{$genName}.{$extension}";
+                    $upload = $request->image->storeAs('categories', $nameFile);
+                    if ( !$upload )
+                        return redirect()
+                                    ->back()
+                                    ->with('error', 'Falha ao fazer upload')
+                                    ->withInput();
+
+                }
+
+                $categorie = new Categorie;
+                $categorie->name = $request->input('name');
+                $categorie->description = $request->input('description');
+                $categorie->parent = $request->input('parent');
+                $categorie->icon = $nameFile;
+                $categorie->save();
+
+
+
+                return redirect('/admin/categorie')->with('Success', 'categorie Created');
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Categorie  $categorie
-     * @return \Illuminate\Http\Response
-     */
+
+
+
     public function show(Categorie $categorie)
     {
         //

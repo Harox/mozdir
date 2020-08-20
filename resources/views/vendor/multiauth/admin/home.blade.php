@@ -1,6 +1,6 @@
 @extends('multiauth::layouts.app')
 @section('content')
-<div class="container">
+
 
 
                     <div class="page-wrapper">
@@ -634,7 +634,7 @@
 
 
 
-</div>
+
 @endsection
 
 
