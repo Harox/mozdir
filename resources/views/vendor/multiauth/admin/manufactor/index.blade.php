@@ -23,7 +23,7 @@
                                                 <div class="m-l-10 align-self-center">
                                                     <a href="/user"">
                                                     <h2 class="m-b-0">Add</h2>
-                                                    <h6 class="text-muted m-b-0">new service</h6></div>
+                                                    <h6 class="text-muted m-b-0">new manufactor</h6></div>
                                                 </a>
                                             </div>
                                         </div>
@@ -89,7 +89,7 @@
                                 <div class="col-12">
                                     <div class="card">
                                         <div class="card-body">
-                                            <h4 class="card-title">Vendors list</h4>
+                                            <h4 class="card-title">Manufactors list</h4>
                                             <h6 class="card-subtitle"></h6>
                                             <div class="table-responsive">
                                                 <div id="add-contact" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -150,18 +150,18 @@
                                                     <tbody>
 
 
-                                                    @if(count($vendors) > 0)
-                                                    @foreach($vendors as $vendor)
+                                                    @if(count($manufactors) > 0)
+                                                    @foreach($manufactors as $manufactor)
                                                     <tr class="footable-even" style="">
-                                                        <td><span class="footable-toggle"></span>{{$vendor->name}}</td>
-                                                        <td>{{$vendor->phone}}</td>
-                                                        <td>{{$vendor->email}}</td>
-                                                        <td><span class="label label-danger">{{$vendor->address}}</span> </td>
+                                                        <td><span class="footable-toggle"></span>{{$manufactor->name}}</td>
+                                                        <td>{{$manufactor->phone}}</td>
+                                                        <td>{{$manufactor->email}}</td>
+                                                        <td><span class="label label-danger">{{$manufactor->address}}</span> </td>
                                                         <td class="text-nowrap">
-                                                            <a href="vendor/{{ $vendor->id }}" data-toggle="tooltip" data-original-title="View"> <i class="fa fa-eye text-inverse m-r-10"></i> </a>
-                                                            <a href="vendor/{{ $vendor->id }}/edit" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                                            <a href="manufactor/{{ $manufactor->id }}" data-toggle="tooltip" data-original-title="View"> <i class="fa fa-eye text-inverse m-r-10"></i> </a>
+                                                            <a href="manufactor/{{ $manufactor->id }}/edit" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
 
-                                                            <form action="{{ route('vendor.destroy', $vendor->id)}}" method="POST">
+                                                            <form action="{{ route('manufactor.destroy', $manufactor->id)}}" method="POST">
                                                                 @csrf
                                                                 @method('DELETE')
                                                                 <button type="submit"><a data-toggle="tooltip" data-original-title="Delete"> <i class="fa fa-close text-danger"></i> </a> </button>
@@ -174,7 +174,7 @@
 
                                                     @endforeach
                                                     @else
-                                                    <p>No Vendors Found</p>
+                                                    <p>No Manufactors Found</p>
                                                     @endif
 
                                                     </tbody>

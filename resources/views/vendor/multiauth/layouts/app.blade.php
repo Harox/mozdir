@@ -45,6 +45,7 @@
         @include('vendor.multiauth.admin.inc.navbar')
         @include('vendor.multiauth.admin.inc.sidebar')
 
+
         <main class="py-4">
             
             @yield('content')
@@ -58,10 +59,10 @@
 
     <!-- All Jquery -->
     <!-- ============================================================== -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
 
     <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}" defer></script>
-    
+
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}" defer></script>
@@ -94,16 +95,16 @@
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="{{ asset('assets/plugins/styleswitcher/jQuery.style.switcher.js') }}" defer></script>
-    
+
     <script src="{{ asset('assets/plugins/tinymce/tinymce.min.js') }}" defer></script>
 
-  
+
     <!-- icheck -->
     <script src="{{ asset('assets/plugins/icheck/icheck.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/icheck/icheck.init.js') }}"></script>
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>  --}}
-    
+
 
     <script>
     $(document).ready(function() {

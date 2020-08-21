@@ -26,62 +26,35 @@ class CategorieController extends Controller
         return view('multiauth::admin.categorie.index')->with('categories', $categories);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(){
         $categories = Categorie::orderBy('id','asc')->get();
         return view('multiauth::admin.categorie.create')->with('categories', $categories);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
+
+    public function store(Request $request){
 
 
 
-        // $validator = Validator::make($request->all(), [
-        //     'name' => 'required',
-        //     'icon' => 'required',
+        $nameFile = 'noImage.jpg';
 
-        // ])->validate();
+        if ($request->hasFile('image')) {
+            $genName = uniqid(date('HisYmd'));
+            $extension = $request->image->extension();
+            $nameFile = "{$genName}.{$extension}";
+            $upload = $request->image->storeAs('public/categories', $nameFile);
+            if ( !$upload )
+            return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
+        }
 
+        $categorie = new Categorie;
+        $categorie->name = $request->input('name');
+        $categorie->description = $request->input('description');
+        $categorie->parent = $request->input('parent');
+        $categorie->icon = $nameFile;
+        $categorie->save();
 
-                $nameFile = 'noImage.jpg';
-
-            // Verifica se informou o arquivo e se é válido
-                if ($request->hasFile('image') && $request->file('image')->isValid()) {
-
-                    $genName = uniqid(date('HisYmd'));
-                    $extension = $request->image->extension();
-                    $nameFile = "{$genName}.{$extension}";
-                    $upload = $request->image->storeAs('categories', $nameFile);
-                    if ( !$upload )
-                        return redirect()
-                                    ->back()
-                                    ->with('error', 'Falha ao fazer upload')
-                                    ->withInput();
-
-                }
-
-                $categorie = new Categorie;
-                $categorie->name = $request->input('name');
-                $categorie->description = $request->input('description');
-                $categorie->parent = $request->input('parent');
-                $categorie->icon = $nameFile;
-                $categorie->save();
-
-
-
-                return redirect('/admin/categorie')->with('Success', 'categorie Created');
-
+        return redirect('/admin/categorie')->with('success', 'categorie Created');
     }
 
 
