@@ -259,6 +259,8 @@
 <script src="{{ asset('assets/plugins/moment/min/moment.min.js') }}" defer></script>
 <script src="{{ asset('assets/plugins/wizard/jquery.steps.min.js') }}" defer></script>
 <script src="{{ asset('assets/plugins/wizard/jquery.validate.min.js') }}" defer></script>
+
+
 @endsection
 
 
