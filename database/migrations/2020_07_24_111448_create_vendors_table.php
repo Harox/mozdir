@@ -25,7 +25,7 @@ class CreateVendorsTable extends Migration
             $table->string('job')->nullable();
             $table->string('post_code')->nullable();
             $table->enum('verified', ['yes', 'no'])->default('no')->nullable();
-            $table->string('profile_image')->nullable();
+            $table->string('image', 80)->nullable();
             $table->timestamps();
         });
     }

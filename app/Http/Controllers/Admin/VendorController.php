@@ -28,52 +28,40 @@ class VendorController extends Controller
         return view('multiauth::admin.vendor.index')->with('vendors', $vendors);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('multiauth::admin.vendor.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
 
-        // $validator = Validator::make($request->all(), [
-        //     'fname' => 'required',
-        //     'lname' => 'required',
-            
-        // ])->validate();
+        $nameFile = 'noImage.jpg';
 
-        $validator = Validator::make($request->all(), [
-            'name' => 'required',
-            'last_name' => 'required',
-            'phone' => 'required',
-            'address' => 'required',
-            'email' => 'required'
-        ])->validate();
+        if ($request->hasFile('image')) {
+            $genName = uniqid(date('HisYmd'));
+            $extension = $request->image->extension();
+            $nameFile = "{$genName}.{$extension}";
+            $upload = $request->image->storeAs('public/images', $nameFile);
+            if ( !$upload )
+            return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
+        }
 
+        $vendor = new Vendor;
+        $vendor->name = $request->input('name');
+        $vendor->last_name = $request->input('last_name');
+        $vendor->gender = $request->input('gender');
+        $vendor->birthday = $request->input('birthday');
+        $vendor->phone = $request->input('phone');
+        $vendor->address = $request->input('address');
+        $vendor->email = $request->input('email');
+        $vendor->verified = $request->input('verified');
+        $vendor->image = $nameFile;
+        $vendor->save();
+ 
 
-       $vendor = new Vendor;
-       $vendor->name = $request->input('name');
-       $vendor->last_name = $request->input('last_name');
-       $vendor->gender = $request->input('gender');
-       $vendor->birthday = $request->input('birthday');
-       $vendor->phone = $request->input('phone');
-       $vendor->address = $request->input('address');
-       $vendor->email = $request->input('email');
-       $vendor->verified = $request->input('verified');
-       $vendor->save();
-
-       return redirect('/admin/vendor')->with('Success', 'Vendor Created');
+        return redirect('/admin/vendor')->with('success', 'Vendor Created');
 
     }
 

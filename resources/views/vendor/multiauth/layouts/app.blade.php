@@ -12,29 +12,25 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
     <title>MozDirectory</title>
-    <!-- Bootstrap Core CSS -->
-    <!-- Scripts -->
 
     <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    @yield('meta')
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/colors/purple.css') }}" rel="stylesheet">
+
     <!-- chartist CSS -->
-    <link href="{{ asset('assets/plugins/chartist-js/dist/chartist.min.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('assets/plugins/chartist-js/dist/chartist.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/chartist-js/dist/chartist-init.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/plugins/css-chart/css-chart.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/plugins/html5-editor/bootstrap-wysihtml5.css') }}" rel="stylesheet">
-
-    <!-- Vector CSS -->
+    <link href="{{ asset('assets/plugins/html5-editor/bootstrap-wysihtml5.css') }}" rel="stylesheet"> 
     <link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <!-- You can change the theme colors from here -->
-    <link href="{{ asset('css/colors/purple.css') }}" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    --}}
+
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body class="fix-header fix-sidebar card-no-border">
@@ -66,7 +62,6 @@
     <!-- Bootstrap tether Core JavaScript -->
     <script src="{{ asset('assets/plugins/bootstrap/js/popper.min.js') }}" defer></script>
     <script src="{{ asset('assets/plugins/bootstrap/js/bootstrap.min.js') }}" defer></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
     <script src="{{ asset('js/jquery.slimscroll.js') }}" defer></script>
     <!--Wave Effects -->
     <script src="{{ asset('js/waves.js') }}" defer></script>
@@ -75,38 +70,40 @@
     <!--stickey kit -->
     <script src="{{ asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}" defer></script>
     <script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.min.js') }}" defer></script>
-    <!--stickey kit -->
-    <script src="{{ asset('assets/plugins/sticky-kit-master/dist/sticky-kit.min.js') }}" defer></script>
-    <script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.min.js') }}" defer></script>
-    <script src="{{ asset('assets/plugins/sparkline/jquery.sparkline.min.js') }}" defer></script>
     <!--Custom JavaScript -->
     <script src="{{ asset('js/custom.min.js') }}" defer></script>
     <!-- ============================================================== -->
     <!-- This page plugins -->
+    @yield('scripts')    
     <!-- ============================================================== -->
+    
     <!-- chartist chart -->
-    <script src="{{ asset('assets/plugins/chartist-js/dist/chartist.min.js') }}" defer></script>
-    <script src="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('assets/plugins/chartist-js/dist/chartist.min.js') }}" defer></script>
+    <script src="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js') }}" defer></script> --}}
     <!-- Vector map JavaScript -->
-    <script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js') }}" defer></script>
     <script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js') }}" defer></script>
-    <script src="{{ asset('js/dashboard3.js') }}" defer></script>
+    <script src="{{ asset('js/dashboard3.js') }}" defer></script> --}}
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->
     <script src="{{ asset('assets/plugins/styleswitcher/jQuery.style.switcher.js') }}" defer></script>
 
-    <script src="{{ asset('assets/plugins/tinymce/tinymce.min.js') }}" defer></script>
+    {{-- <script src="{{ asset('assets/plugins/tinymce/tinymce.min.js') }}" defer></script> --}}
+
+    
+
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script> --}}
 
 
     <!-- icheck -->
-    <script src="{{ asset('assets/plugins/icheck/icheck.min.js') }}"></script>
-    <script src="{{ asset('assets/plugins/icheck/icheck.init.js') }}"></script>
+    {{-- <script src="{{ asset('assets/plugins/icheck/icheck.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/icheck/icheck.init.js') }}"></script> --}}
 
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.2/icheck.min.js"></script>  --}}
 
 
-    <script>
+    {{-- <script>
     $(document).ready(function() {
 
         if ($("#mymce").length > 0) {
@@ -124,7 +121,7 @@
             });
         }
     });
-    </script>
+    </script> --}}
 
 </body>
 

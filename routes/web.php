@@ -32,4 +32,6 @@ Route::resource('/admin/vendor', 'Admin\VendorController');
 Route::resource('/admin/service', 'Admin\ServiceController');
 Route::resource('/admin/categorie', 'Admin\CategorieController');
 Route::resource('/admin/manufactor', 'Admin\ManufactorController');
+Route::resource('/admin/oportunitie', 'Admin\OportunitieController');
+Route::resource('/admin/product', 'Admin\ProductController');
 

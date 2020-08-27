@@ -39,6 +39,7 @@
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="product">All Products</a></li>
                         <li><a href="product/categorie">Categories</a></li>
+                        <li><a href="product/tags">Tags</a></li>
                     </ul>
                 </li>
 
@@ -51,8 +52,8 @@
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false"><i class="fa fa-eye"></i><span class="hide-menu">Oportunities</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="map-google.html">View All</a></li>
-                        <li><a href="map-vector.html">Add New</a></li>
+                        <li><a href="oportunitie">All Oportunities</a></li>
+                        <li><a href="categorie">categorie</a></li>
                     </ul>
                 </li>
 

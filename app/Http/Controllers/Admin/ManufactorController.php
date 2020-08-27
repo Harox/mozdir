@@ -45,19 +45,37 @@ class ManufactorController extends Controller
      */
     public function store(Request $request)
     {
+        $nameFile = 'noImage.jpg';
+
+        if ($request->hasFile('image')) {
+            $genName = uniqid(date('HisYmd'));
+            $extension = $request->image->extension();
+            $nameFile = "{$genName}.{$extension}";
+            $upload = $request->image->storeAs('public/images', $nameFile);
+            if ( !$upload )
+            return redirect()->back()->with('error', 'Upload Error')->withInput();
+        }
+
+        $manufactor = new Manufactor;
+        $manufactor->name = $request->input('name');
+        $manufactor->phone = $request->input('phone');
+        $manufactor->address = $request->input('address');
+        $manufactor->email = $request->input('email');
+        $manufactor->post_code = $request->input('post_code');
+        $manufactor->verified = $request->input('verified');
+        $manufactor->image = $nameFile;
+        $manufactor->save();
+ 
+
+        return redirect('/admin/manufactor')->with('success', 'Manufactor Created');
 
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Manufactor  $manufactor
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        $manufactor = Manufactor::find($id);
-        return view('multiauth::admin.vendor.show')->with('manufactor', $manufactor);
+        // $manufactor = Manufactor::find($id);
+        // return view('multiauth::admin.vendor.show')->with('manufactor', $manufactor);
     }
 
     /**
