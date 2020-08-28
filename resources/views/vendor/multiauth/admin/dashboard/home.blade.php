@@ -1,4 +1,17 @@
 @extends('multiauth::layouts.app')
+@section('title')
+    Admin Dashboard
+@endsection
+
+@section('meta')
+    <link href="{{ asset('assets/plugins/chartist-js/dist/chartist.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/chartist-js/dist/chartist-init.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/css-chart/css-chart.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet">
+
+@endsection
+
 @section('content')
 
 
@@ -634,4 +647,12 @@
 
 @endsection
 
+@section('scripts')
 
+<script src="{{ asset('assets/plugins/chartist-js/dist/chartist.min.js')}}" ></script>
+<script src="{{ asset('assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')}}" ></script>
+<script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js')}}" ></script>
+<script src="{{ asset('assets/plugins/vectormap/jquery-jvectormap-us-aea-en.js')}}" ></script>
+<script src="{{ asset('js/dashboard3.js')}}" ></script>
+<script src="{{ asset('assets/plugins/styleswitcher/jQuery.style.switcher.js')}}" ></script>
+@endsection

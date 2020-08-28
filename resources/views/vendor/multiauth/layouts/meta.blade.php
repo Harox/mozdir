@@ -6,6 +6,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
 {{-- <link href="{{ asset('assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"> --}}
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 @yield('meta')
 <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 <link href="{{ asset('css/colors/purple.css') }}" rel="stylesheet">
