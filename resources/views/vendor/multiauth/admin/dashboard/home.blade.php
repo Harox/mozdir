@@ -104,7 +104,7 @@
                                             <!-- Column -->
                                             <div class="col p-r-0 align-self-center">
                                                 <h2 class="font-light m-b-0">1795</h2>
-                                                <h6 class="text-muted">New Leads</h6></div>
+                                                <h6 class="text-muted">Total Sales</h6></div>
                                             <!-- Column -->
                                             <div class="col text-right ">
                                                 <div data-label="40%" class="css-bar m-b-0 css-bar-primary css-bar-40"></div>
@@ -206,10 +206,10 @@
                                                 <table class="table stylish-table">
                                                     <thead>
                                                         <tr>
-                                                            <th colspan="2">Assigned</th>
-                                                            <th>Name</th>
-                                                            <th>Priority</th>
-                                                            <th>Budget</th>
+                                                            <th colspan="2">Service</th>
+                                                            <th>User</th>
+                                                            <th>Type</th>
+                                                            <th>Amount</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
