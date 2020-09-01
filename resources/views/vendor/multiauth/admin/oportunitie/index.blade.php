@@ -1,4 +1,8 @@
 @extends('multiauth::layouts.app')
+@section('title')
+    Oportunities
+@endsection
+
 @section('content')
 <div class="page-wrapper">
     <div class="container-fluid">

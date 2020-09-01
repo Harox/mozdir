@@ -17,18 +17,19 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name', 100);
             $table->mediumText('description')->nullable();
-            $table->float('regular_price');
-            $table->float('sale_price');
-            $table->float('stock');
+            $table->float('regular_price')->nullable();
+            $table->float('sale_price')->nullable();
+            $table->float('stock')->nullable();
             $table->enum('stock_status', ['in', 'out'])->nullable();
-            $table->float('Weight');
-            $table->float('length');
-            $table->float('width');
-            $table->float('height');
+            $table->float('Weight')->nullable();
+            $table->float('length')->nullable();
+            $table->float('width')->nullable();
+            $table->float('height')->nullable();
             $table->string('purchase_notes')->nullable();
-            $table->float('min_order');
+            $table->float('min_order')->nullable();
             $table->string('keyword')->nullable();
             $table->string('image', 80)->nullable();
+            $table->integer('admin_id')->nullable();
             $table->timestamps();
         });
     }

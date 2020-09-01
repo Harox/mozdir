@@ -28,7 +28,7 @@ Route::get('/vendor', 'PagesController@vendor');
 
 
 //Admin Routes
-
+// Route::GET('/home', 'Bitfumes\Multiauth\Http\Controllers\AdminController@index')->name('admin.home');
 Route::resource('/admin/post', 'Admin\PostController');
 Route::resource('/admin/vendor', 'Admin\VendorController');
 Route::resource('/admin/product', 'Admin\ProductController');
@@ -37,5 +37,6 @@ Route::resource('/admin/categorie', 'Admin\CategorieController');
 Route::resource('/admin/manufactor', 'Admin\ManufactorController');
 Route::resource('/admin/oportunitie', 'Admin\OportunitieController');
 Route::resource('/admin/business', 'Admin\BusinessController');
-Route::resource('/admin/setting', 'Admin\SettingController');
+Route::resource('/admin/setting', 'Admin\SettingController')->middleware('role:super');
+Route::resource('/admin/user', 'Admin\UserController')->middleware('role:super');
 

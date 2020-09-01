@@ -247,11 +247,13 @@
                     <div class="dropdown-menu dropdown-menu-right scale-up">
                         <ul class="dropdown-user">
                             <li>
+                                
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img src={{ asset('assets/images/users/1.jpg') }} alt="user"></div>
+                                    {{--  <div class="u-img"><img src=" {{ asset('storage/images/'.\Auth::user()->image) }}" alt="user"></div>  --}}
+                                    <div class="u-img"><img src=" {{ asset('storage/images/noImage.jpg') }}" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
+                                        <h4>{{ Auth::user()->name }}</h4>
+                                        <p class="text-muted">{{ Auth::user()->name }}</p><a href="profile.html" class="btn btn-rounded btn-danger btn-sm">View Profile</a></div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>

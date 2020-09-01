@@ -1,4 +1,8 @@
 @extends('multiauth::layouts.app')
+@section('title')
+    Settings
+@endsection
+
 @section('content')
 <div class="page-wrapper">
     <div class="container-fluid">
@@ -51,9 +55,9 @@
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">SMS Gateway</a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Payments</a> </li>
                         <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Mobile</a> </li>
-                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#roles" role="tab" aria-expanded="false">Roles</a> </li>
-                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Profile</a> </li>
-                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Profile</a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#roles" role="tab" aria-expanded="false">Admins</a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Roles</a> </li>
+                        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab" aria-expanded="false">Permissions</a> </li>
                     </ul>
                     <!-- Tab panes -->
                     <div class="tab-content">

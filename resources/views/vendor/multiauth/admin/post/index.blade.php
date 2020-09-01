@@ -1,4 +1,9 @@
 @extends('multiauth::layouts.app')
+@section('title')
+    News
+@endsection
+
+
 @section('content')
 
 

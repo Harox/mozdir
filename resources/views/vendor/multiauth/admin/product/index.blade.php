@@ -1,4 +1,9 @@
 @extends('multiauth::layouts.app')
+@section('title')
+    Products
+@endsection
+
+
 @section('content')
 <div class="page-wrapper">
     <div class="container-fluid">
@@ -151,69 +156,52 @@
                 <div class="modal-body">
                     <div class="form-group">
 
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Name</label>
-                            <div class="col-md-9">
-                                <input type="text" name="name" id="name" placeholder="type the Name" class="form-control" required>
-                            </div>
+                        
+                        <div class="col-md-12 m-b-20">
+                            <input type="text" name="name" id="name" placeholder="type the Name" class="form-control" required>
                         </div>
                        
                         <div class="col-md-12 m-b-20">
                             <textarea class="form-control" id="description" name="description" placeholder="Write the description here.." rows="5"></textarea>
                         </div>
 
-                        
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Gender</label>
-                            <div class="col-md-9">
-                                <select class="form-control custom-select" name="gender" id="gender">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Date of Birth</label>
-                            <div class="col-md-9">
-                                <input type="date" id="birthday"name="birthday" class="form-control" placeholder="dd/mm/yyyy">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Phone Number</label>
-                            <div class="col-md-9">
-                                <input type="number" id="phone" name="phone" class="form-control" required>
-                            </div>
-                        </div>
-                       
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Address</label>
-                            <div class="col-md-9">
-                                <input type="text" id="address" name="address" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">E-Mail</label>
-                            <div class="col-md-9">
-                                <input type="email" id="email" name="email" class="form-control" required>
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Verification</label>
-                            <div class="col-md-9">
-                                <div class="demo-checkbox">
-                                    
-                                    <input type="checkbox" id="verified" name="verified" value="yes" class="filled-in chk-col-light-blue" checked="">
-                                    <label for="verified">Verified</label>
-                                </div>
-                            </div>
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="regular_price" name="regular_price" placeholder="type the buy price"class="form-control" >
                         </div>
 
                         <div class="col-md-12 m-b-20">
-                            <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload Vendor Logo</span>
+                            <input type="number" id="sale_price" name="sale_price" placeholder="type the sale price" class="form-control" required>
+                        </div>
+                       
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="stock" name="stock" placeholder="type the existing stock" class="form-control" required>
+                        </div>
+
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="Weight" name="Weight" placeholder="type the Weight" class="form-control" >
+                        </div>
+
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="length" name="length" placeholder="type the length" class="form-control" >
+                        </div>
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="width" name="width" placeholder="type the width" class="form-control" >
+                        </div>
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="height" name="height" placeholder="type the height" class="form-control" >
+                        </div>
+
+                        <div class="col-md-12 m-b-20">
+                            <textarea class="form-control" id="purchase_notes" name="purchase_notes" placeholder="Write the purchase notes here.." rows="5"></textarea>
+                        </div>
+
+                        <div class="col-md-12 m-b-20">
+                            <input type="number" id="min_order" name="min_order" placeholder="type the min Order" class="form-control" >
+                        </div>
+
+
+                        <div class="col-md-12 m-b-20">
+                            <div class="fileupload btn btn-danger btn-rounded waves-effect waves-light"><span><i class="ion-upload m-r-5"></i>Upload the Product image</span>
                                 <input type="file" accept="image/*" name="image" id="image" class="upload">
                             </div>
                         </div>

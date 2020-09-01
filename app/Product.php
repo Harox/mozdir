@@ -12,4 +12,12 @@ class Product extends Model
     public $primarykey = 'id';
 
     public $timestamps = true;
+
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
+
+    public function admin(){
+        return $this->belongsTo('Bitfumes\Multiauth\Model\Admin');
+    }
 }

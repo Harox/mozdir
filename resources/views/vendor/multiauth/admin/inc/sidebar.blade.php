@@ -32,7 +32,7 @@
                 <li> <a class="waves-effect waves-dark" href="manufactor" aria-expanded="false"><i class="mdi mdi-worker"></i><span class="hide-menu">Manufactors</span></a>
                 </li>
 
-                <li> <a class="waves-effect waves-dark" href="/user" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Users</span></a>
+                <li> <a class="waves-effect waves-dark" href="user" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Users</span></a>
                 </li>
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="/product" aria-expanded="false"><i class="fa  fa-archive"></i><span class="hide-menu">Products</span></a>
