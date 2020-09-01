@@ -261,8 +261,8 @@
                             <li role="separator" class="divider"></li>
                             <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
                             <li role="separator" class="divider"></li>
-                            <li>
-                                <a href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                            <li> 
+                                <a class="ti-power-off" href="{{ route('admin.logout') }}" onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
                                     Logout
                                 </a>    
                                 <form id="frm-logout" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
