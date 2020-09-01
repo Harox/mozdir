@@ -17,7 +17,7 @@
                             <div class="round align-self-center round-danger"><i class="ti-plus"></i></div>
                             <div class="m-l-10 align-self-center">
                                 <a data-toggle="modal" data-target="#add-contact">
-                                <h2 class="m-b-0">Add</h2>
+                                <h2 class="m-b-0">ADD</h2>
                                 <h6 class="text-muted m-b-0">new service</h6></div>
                             </a>
                         </div>

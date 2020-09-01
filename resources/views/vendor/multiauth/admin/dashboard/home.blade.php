@@ -201,7 +201,7 @@
                                                 <option value="2">March</option>
                                                 <option value="3">April</option>
                                             </select>
-                                            <h4 class="card-title">Projects of the Month</h4>
+                                            <h4 class="card-title">Last Transactions</h4>
                                             <div class="table-responsive m-t-20">
                                                 <table class="table stylish-table">
                                                     <thead>
