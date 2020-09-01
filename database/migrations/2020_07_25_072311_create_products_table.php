@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->mediumText('description')->nullable();
             $table->float('regular_price');
             $table->float('sale_price');
+            $table->float('stock');
             $table->enum('stock_status', ['in', 'out'])->nullable();
             $table->float('Weight');
             $table->float('length');
