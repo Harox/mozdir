@@ -40,3 +40,7 @@ Route::resource('/admin/business', 'Admin\BusinessController');
 Route::resource('/admin/setting', 'Admin\SettingController')->middleware('role:super');
 Route::resource('/admin/user', 'Admin\UserController')->middleware('role:super');
 
+
+Auth::routes();
+
+// Route::get('/home', 'HomeController@index')->name('home');

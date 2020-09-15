@@ -770,7 +770,7 @@
                                 </figure>
                                 <div class="sl-featuredProducts--post__content">
                                     <div class="sl-featuredProducts--post__title">
-                                        <h6>Nub's Adventures Jailbreak</h6>
+                                        <h6>Nubs Adventures Jailbreak</h6>
                                     </div>
                                     <div class="sl-featuredProducts--post__price">
                                         <h5>$26.40</h5>

@@ -34,9 +34,9 @@
     <link href="{{ asset('front/css/main.css') }}" rel="stylesheet">
 
 </head>
-
+{{-- @include('inc2.preloader') --}}
 @include('inc2.header')
-@include('inc2.preloader')
+
 
 <body class="sl-home">
 
