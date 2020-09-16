@@ -126,7 +126,8 @@
 
                               <div class="tab-pane active" id="home" role="tabpanel" aria-expanded="true">
                                   <div class="card-body">
-                                    <form action="#" class="form-horizontal">
+                                    <form method="POST" enctype="multipart/form-data" action="{{ route('register') }}" class="form-horizontal">
+                                      @csrf
                                       <div class="form-body">
                                           <h3 class="box-title">Person Info</h3>
                                           <hr class="m-t-0 m-b-40">
@@ -135,14 +136,19 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">First Name</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control" >
+                                                          <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus >
+                                                          @error('name')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                          @enderror
                                                         </div>
                                                   </div>
                                               </div>
                                               <!--/span-->
                                               <div class="col-md-6">
                                                   <div class="form-group row">
-                                                      <label class="control-label text-right col-md-3">Last Name</label>
+                                                      <label class="control-label text-right col-md-3" id="last_name" name="last_name">Last Name</label>
                                                       <div class="col-md-9">
                                                           <input type="text" class="form-control">
                                                         </div>
@@ -156,9 +162,10 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Gender</label>
                                                       <div class="col-md-9">
-                                                          <select class="form-control custom-select">
-                                                              <option value="">Male</option>
-                                                              <option value="">Female</option>
+                                                          <select class="form-control custom-select" name="gender" id="gender">
+                                                              <option value="male">Male</option>
+                                                              <option value="female">Female</option>
+                                                              <option value="other">Other</option>
                                                           </select>
                                                         </div>
                                                   </div>
@@ -168,7 +175,7 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Birthday</label>
                                                       <div class="col-md-9">
-                                                          <input type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                                          <input type="date" id="birthday" name="birthday" class="form-control" placeholder="dd/mm/yyyy">
                                                       </div>
                                                   </div>
                                               </div>
@@ -183,7 +190,7 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Phone</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input type="number" id="phone" name="phone" class="form-control" required>
                                                       </div>
                                                   </div>
                                               </div>
@@ -191,7 +198,7 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Address</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input type="text" id="address" name="address" class="form-control" required>
                                                       </div>
                                                   </div>
                                               </div>
@@ -201,7 +208,13 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Email</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                                                          @error('email')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                          @enderror
                                                       </div>
                                                   </div>
                                               </div>
@@ -210,7 +223,13 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Password</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                                          @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                          @enderror
                                                       </div>
                                                   </div>
                                               </div>
@@ -220,9 +239,9 @@
                                           <div class="row">
                                               <div class="col-md-6">
                                                   <div class="form-group row">
-                                                      <label class="control-label text-right col-md-3">Repeat password</label>
+                                                      <label class="control-label text-right col-md-3">Confirm password</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                                                       </div>
                                                   </div>
                                               </div>
@@ -231,7 +250,7 @@
                                                   <div class="form-group row">
                                                       <label class="control-label text-right col-md-3">Country</label>
                                                       <div class="col-md-9">
-                                                          <select class="form-control custom-select">
+                                                          <select class="form-control custom-select" name="country" id="country">
                                                               <option>Mozambique</option>
                                                               <option>South Africa</option>
                                                           </select>
@@ -248,7 +267,7 @@
                                               <div class="col-md-6">
                                                   <div class="row">
                                                       <div class="col-md-offset-3 col-md-9">
-                                                          <button type="submit" class="btn btn-success">Submit</button>
+                                                          <button type="submit" class="btn btn-success">{{ __('Register') }}</button>
                                                           <button type="button" class="btn btn-inverse">Cancel</button>
                                                       </div>
                                                   </div>

@@ -182,7 +182,7 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="control-label text-right col-md-3">Date of Birth</label>
+                            <label class="control-label text-right col-md-3">Birthday</label>
                             <div class="col-md-9">
                                 <input type="date" id="birthday"name="birthday" class="form-control" placeholder="dd/mm/yyyy">
                             </div>
