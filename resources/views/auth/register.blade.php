@@ -148,9 +148,9 @@
                                               <!--/span-->
                                               <div class="col-md-6">
                                                   <div class="form-group row">
-                                                      <label class="control-label text-right col-md-3" id="last_name" name="last_name">Last Name</label>
+                                                      <label class="control-label text-right col-md-3">Last Name</label>
                                                       <div class="col-md-9">
-                                                          <input type="text" class="form-control">
+                                                          <input type="text" class="form-control" id="last_name" name="last_name">
                                                         </div>
                                                   </div>
                                               </div>

@@ -44,3 +44,4 @@ Route::resource('/admin/user', 'Admin\UserController')->middleware('role:super')
 Auth::routes();
 
 // Route::get('/home', 'HomeController@index')->name('home');
+// Route::post('/register', 'CustomerController@saveCustomer')->name('register.customer');
