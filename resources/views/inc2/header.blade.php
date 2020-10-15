@@ -187,13 +187,81 @@
                                 </div>
                             @endif
                         @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                      
+                            <div class="sl-user sl-userdropdown">
+                                <a href="javascript:void(0);">
+                                    <img src="{{ asset('front/images/insight/user-img.jpg')}}" alt="Image Description">
+                                        <span class="sl-user__description"><em class="d-block">Hello!</em>{{ Auth::user()->name }}</span>
+                                    <i class="ti-angle-down"></i>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <ul class="sl-usermenu">
+                                    <li>
+                                        <a href="dashboard-insight.html">
+                                            <i class="ti-dashboard"></i><span>Insights</span>
+                                        </a>
+                                    </li>
+                                        <li>
+                                        <a href="dashboard-vendor.html">
+                                            <i class="ti-shopping-cart"></i><span>Vendors</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item-has-children page_item_has_children">
+                                        <a href="javascript:void(0);" class="sl-notification sl-noticolor1">
+                                            <i class="ti-star"></i><span>Manage Appointments</span>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="dashboard-appointment-single.html">Appointment Single</a></li>
+                                            <li><a href="dashboard-all-appointment.html">All Appointment</a></li>
+                                            <li><a href="dashboard-manage-time-slots.html">Manage Time Slots</a></li>
+                                            <li><a href="dashboard-manage-services.html">Manage Services &amp; Prices</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard-profile-settings.html">
+                                            <i class="ti-user"></i><span>Profile Settings</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item-has-children page_item_has_children">
+                                        <a href="javascript:void(0);">
+                                            <i class="ti-bookmark-alt"></i><span>Manage Articles</span>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="dashboard-article-list.html">Articles List</a></li>
+                                            <li><a href="dashboard-add-new-article.html">Add New Articles</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard-inbox.html">
+                                            <i class="ti-email"></i><span>inbox</span>
+                                        </a>
+                                    </li>
+                                    <li class="menu-item-has-children page_item_has_children">
+                                        <a href="javascript:void(0);">
+                                            <i class="ti-layers"></i><span>Packages &amp; Payouts</span>
+                                        </a>
+                                        <ul class="sub-menu">
+                                            <li><a href="dashboard-buy-package.html">Packages</a></li>
+                                            <li><a href="dashboard-all-payouts.html">Payouts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard-my-favorites.html">
+                                            <i class="ti-heart"></i><span>My Favorites</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="dashboard-notifications.html">
+                                            <i class="ti-bell"></i><span>Notifications</span>
+                                        </a>
+                                    </li>
+                                    <li class="sl-active">
+                                        <a href="dashboard-accountprivacy.html">
+                                            <i class="ti-lock"></i><span>Account &amp; Privacy</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
@@ -202,92 +270,12 @@
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
+                                    </li>
+                                </ul>
+
+                                
+                            </div>
                         @endguest
-                    
-
-                <div class="sl-user sl-userdropdown">
-                    <a href="javascript:void(0);">
-                        <img src="{{ asset('front/images/insight/user-img.jpg')}}" alt="Image Description">
-                            <span class="sl-user__description"><em class="d-block">Evening!</em>Stephnie</span>
-                        <i class="ti-angle-down"></i>
-                    </a>
-                    <ul class="sl-usermenu">
-                        <li>
-                            <a href="dashboard-insight.html">
-                                <i class="ti-dashboard"></i><span>Insights</span>
-                            </a>
-                        </li>
-                            <li>
-                            <a href="dashboard-vendor.html">
-                                <i class="ti-shopping-cart"></i><span>Vendors</span>
-                            </a>
-                        </li>
-                        <li class="menu-item-has-children page_item_has_children">
-                            <a href="javascript:void(0);" class="sl-notification sl-noticolor1">
-                                <i class="ti-star"></i><span>Manage Appointments</span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li><a href="dashboard-appointment-single.html">Appointment Single</a></li>
-                                <li><a href="dashboard-all-appointment.html">All Appointment</a></li>
-                                <li><a href="dashboard-manage-time-slots.html">Manage Time Slots</a></li>
-                                <li><a href="dashboard-manage-services.html">Manage Services &amp; Prices</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="dashboard-profile-settings.html">
-                                <i class="ti-user"></i><span>Profile Settings</span>
-                            </a>
-                        </li>
-                        <li class="menu-item-has-children page_item_has_children">
-                            <a href="javascript:void(0);">
-                                <i class="ti-bookmark-alt"></i><span>Manage Articles</span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li><a href="dashboard-article-list.html">Articles List</a></li>
-                                <li><a href="dashboard-add-new-article.html">Add New Articles</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="dashboard-inbox.html">
-                                <i class="ti-email"></i><span>inbox</span>
-                            </a>
-                        </li>
-                        <li class="menu-item-has-children page_item_has_children">
-                            <a href="javascript:void(0);">
-                                <i class="ti-layers"></i><span>Packages &amp; Payouts</span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li><a href="dashboard-buy-package.html">Packages</a></li>
-                                <li><a href="dashboard-all-payouts.html">Payouts</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="dashboard-my-favorites.html">
-                                <i class="ti-heart"></i><span>My Favorites</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="dashboard-notifications.html">
-                                <i class="ti-bell"></i><span>Notifications</span>
-                            </a>
-                        </li>
-                        <li class="sl-active">
-                            <a href="dashboard-accountprivacy.html">
-                                <i class="ti-lock"></i><span>Account &amp; Privacy</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                <i class="ti-key"></i><span>Logout</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                </div>  
-
-         
 
                 <div class="sl-main-upperBackbtn">
                     <a href="javascript:void(0);"><i class="ti-close"></i></a>
@@ -302,7 +290,7 @@
                         <ul class="navbar-nav mr-auto sl-navbar-nav">
                             <li class="nav-item sl-navactive menu-item-has-mega-menu">
                                 <a class="nav-link" href="javascript:void(0);">Home</a>
-                                <div class="mega-menu nav">
+                                {{-- <div class="mega-menu nav">
                                     <ul class="mega-menu-row">
                                         <li class="mega-menu-col mega-menu-nav">
                                             <ul class="nav nav-tabs">
@@ -876,13 +864,11 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
+                                </div> --}}
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="aboutus.html">About</a>
-                            </li>
+
                             <li class="menu-item-has-mega-menu mega-menu-nav-pages">
-                                <a href="javascript:void(0);">Service Providers</a>
+                                <a href="javascript:void(0);">Services</a>
                                 <div class="mega-menu">
                                     <ul class="mega-menu-row">
                                         <li class="mega-menu-col">
@@ -979,13 +965,17 @@
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a href="vendor-single.html">Vendor Products</a>
+                                <a href="vendor-single.html">Company</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact</a>
+                                <a href="vendor-single.html">Bussines 4 Sale</a>
                             </li>
+                            <li class="nav-item">
+                                <a href="vendor-single.html">Investment</a>
+                            </li>
+                            
                             <li class="nav-item sl-dropdown">
-                                <a href="javascript:void(0);">Page</a>
+                                <a href="javascript:void(0);">Others</a>
                                 <ul class="sl-dropdown__menu">
                                     <li class="nav-item">
                                         <a href="legalprivacy.html">legal Privacy</a>
@@ -1040,6 +1030,13 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="aboutus.html">About</a>
+                            </li>
+                            
                         </ul>
                     </div>
                 </nav>
@@ -1047,11 +1044,6 @@
                     <div class="sl-lower-right__content">
                         <i class="fas fa-mobile-alt"></i>
                         <p>Expreience our mobile app - <a href="javascript:void(0);">Download Now</a></p>
-                    </div>
-                    <div class="sl-lower-right__content">
-                        <i class="fas fa-plane"></i>
-                        <p>Free shipping over 2M locations</p>
-                        <i class="ti-info-alt toltip-content" data-tipso="Location"></i>
                     </div>
                     <div class="sl-lower-right__content sl-dropdown">
                         <a href="javascript:void(0);">

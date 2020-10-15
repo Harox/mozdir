@@ -14,18 +14,15 @@
                             <div class="sl-sectionHead__title sl-below-line sl-below-line__active">
                                 <h2>Most Visited Categories</h2>
                             </div>
-                            <div class="sl-sectionHead__description">
-                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim adena minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="sl-category sl-row">
                     <div class="sl-col sl-col-sm-1-of-2 sl-col-md-1-of-3 sl-col-lg-1-of-4 sl-col-xl-1-of-5">
                         <div class="sl-category__service">
-                            <img src="{{ asset('front/images/index/category/img-01.jpg')}}" alt="image Description">
+                            <img src="{{ asset('front/images/index/category/img-01.png')}}" alt="image Description">
                             <div class="sl-category__description">
-                                <h5>Accounts & Audit</h5>
+                                <h5>Internet & Computer</h5>
                                 <span>12,568 Providers</span>
                             </div>
                             <a href="javascript:void(0);" class="sl-category__icon"><i class="ti-arrow-right"></i></a>
@@ -35,7 +32,7 @@
                         <div class="sl-category__service">
                             <img src="{{ asset('front/images/index/category/img-02.jpg')}}" alt="image Description">
                             <div class="sl-category__description">
-                                <h5>IT Services</h5>
+                                <h5>Handyman Services</h5>
                                 <span>11,756 Providers</span>
                             </div>
                             <a href="javascript:void(0);" class="sl-category__icon"><i class="ti-arrow-right"></i></a>
@@ -158,9 +155,7 @@
                             <div class="sl-sectionHead__title sl-below-line sl-below-line__active">
                                 <h2>Top Service Provider</h2>
                             </div>
-                            <div class="sl-sectionHead__description">
-                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim adena minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -340,7 +335,7 @@
                                 <em>By: <a href="javascript:void(0);">Markus Wickman</a></em>
                             </div>
                             <div class="sl-slider__footer">
-                                <em>Sheffield , UK (<a href="javascript:void(0);">Directions</a>)</em>
+                                <em>Maputo, MZ (<a href="javascript:void(0);">Directions</a>)</em>
                                 <div class="sl-shareHolder">
                                     <a href="javascript:void(0);" class="slShareHolder" ><i class="ti-more-alt"></i></a>
                                     <div class="sl-shareHolder__option">
@@ -486,7 +481,7 @@
                                 <h2>Price You Can Afford</h2>
                             </div>
                             <div class="sl-sectionHead__description">
-                                <p>Consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim adena minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                                <p>choose between the best plans</p>
                             </div>
                         </div>
                     </div>

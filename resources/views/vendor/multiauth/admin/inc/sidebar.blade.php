@@ -26,6 +26,9 @@
                     </ul>
                 </li>
 
+                <li> <a class=" waves-effect waves-dark" href="company" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Companies</span></a>
+                </li>
+
                 <li> <a class=" waves-effect waves-dark" href="vendor" aria-expanded="false"><i class="fa fa-truck"></i><span class="hide-menu">Vendors</span></a>
                 </li>
 
@@ -66,9 +69,11 @@
 
                 <li class="nav-devider"></li>
                 <li class="nav-small-cap">SETTINGS</li>
-                <li> <a class="waves-effect waves-dark" href="/post" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Accounting</span></a>
+                <li> <a class="waves-effect waves-dark" href="accounting" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Accounting</span></a>
                 </li>
-                <li> <a class="waves-effect waves-dark" href="/post" aria-expanded="false"><i class="fa fa-envelope-o"></i><span class="hide-menu">Message Center</span></a>
+                <li> <a class="waves-effect waves-dark" href="package" aria-expanded="false"><i class="fa fa-tasks"></i><span class="hide-menu">Packages</span></a>
+                </li>
+                <li> <a class="waves-effect waves-dark" href="message" aria-expanded="false"><i class="fa fa-envelope-o"></i><span class="hide-menu">Message Center</span></a>
                 </li>
                 <li> <a class="waves-effect waves-dark" href="report" aria-expanded="false"><i class="fa  fa-file-pdf-o"></i><span class="hide-menu">Reports</span></a>
                 </li>

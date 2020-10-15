@@ -37,8 +37,11 @@ Route::resource('/admin/categorie', 'Admin\CategorieController');
 Route::resource('/admin/manufactor', 'Admin\ManufactorController');
 Route::resource('/admin/oportunitie', 'Admin\OportunitieController');
 Route::resource('/admin/business', 'Admin\BusinessController');
+Route::resource('/admin/company', 'Admin\CompanyController');
+Route::resource('/admin/package', 'Admin\PackageController');
 Route::resource('/admin/setting', 'Admin\SettingController')->middleware('role:super');
 Route::resource('/admin/user', 'Admin\UserController')->middleware('role:super');
+
 
 
 Auth::routes();
