@@ -18,7 +18,7 @@ class CreatePackagesTable extends Migration
             $table->string('name', 100);
             $table->string('description')->nullable();
             $table->float('price')->nullable()->default(0.00);
-            $table->date('duration');
+            $table->integer('duration');
             $table->enum('duration_type', ['day', 'week','month', 'year'])->default('month')->nullable();
             $table->string('benefits')->nullable();
             $table->string('image', 80)->nullable();

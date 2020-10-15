@@ -61,9 +61,9 @@
                         <div class="d-flex flex-row">
                             <div class="round align-self-center round-danger"><i class="ti-close"></i></div>
                             <div class="m-l-10 align-self-center">
-                                <a href="/user"">
+                                <a href="/user">
                                 <h3 class="m-b-0">7</h3>
-                                <h5 class="text-muted m-b-0">Rejectedaaa</h5></div>
+                                <h5 class="text-muted m-b-0">Rejecteda</h5></div>
                             </a>
                         </div>
                     </div>
@@ -100,12 +100,12 @@
                                     <tr class="footable-even" style="">
                                         <td><span class="footable-toggle"></span>{{ $package->id }}</td>
                                         <td>
-                                            <a href="javascript:void(0)"><img src=" {{ asset('storage/packages/'.$package->image) }}" width="40" class="img-circle"></a>
+                                            <a href="javascript:void(0)"><img src=" {{ asset('storage/package/'.$package->image) }}" width="40" class="img-circle"></a>
                                         </td>
                                         <td>{{ $package->name }}</td>
                                         <td>{{ $package->description }}</td>
                                         <td>{{ $package->price }}</td>
-                                        <td>{{ $package->duration }}</td>
+                                        <td>{{ $package->duration }} {{ $package->duration_type }}</td>
                                         <td class="text-nowrap">
                                             <a data-toggle="modal" data-target="#view-vendor" data-original-title="view"> <i class="fa fa-eye text-inverse m-r-10"></i> </a>
                                             <a href="#" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-inverse m-r-10"></i> </a>
@@ -175,7 +175,7 @@
                         <div class="form-group row">
                             <label class="control-label text-right col-md-3">price</label>
                             <div class="col-md-9">
-                                <input type="number" id="phone" name="phone" class="form-control" required>
+                                <input type="number" id="price" name="price" class="form-control" required>
                             </div>
                         </div>
                        

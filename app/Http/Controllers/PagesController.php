@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Package;
 
 class PagesController extends Controller
 {
     public function index()
     {
-        return view('pages.home');
+        $packages = Package::all();
+        return view('pages.home')->with('packages', $packages);
     }
 
     public function about()
