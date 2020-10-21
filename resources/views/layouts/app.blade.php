@@ -35,8 +35,6 @@
 
 </head>
 {{-- @include('inc2.preloader') --}}
-@include('inc2.header')
-
 
 <body class="sl-home">
 

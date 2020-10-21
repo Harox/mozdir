@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    {{--  --}}
+    @include('inc2.header')
     @include('inc2.banner')
 
     <main class="sl-main">
