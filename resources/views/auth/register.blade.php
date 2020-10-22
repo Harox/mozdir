@@ -447,50 +447,60 @@
                                                 </fieldset>
                                             </form>
                                         </div>
+
                                         <div class="tab-pane fade" id="signupprovider" role="tabpanel" aria-labelledby="sl-signupprovider">
-                                            <form class="sl-formtheme sl-signupform">
+                                            <form class="sl-formtheme sl-signupform" method="POST" action="{{ route('provider.register') }}" enctype="multipart/form-data">
+                                                @csrf
                                                 <fieldset>
                                                     <div class="sl-signupform-wrap">
                                                         <div class="form-group form-group-half form-group-icon">
                                                             <i class="ti-info-alt toltip-content" data-tipso="name"></i>
-                                                            <input type="text" name="name" value="" class="form-control sl-form-control" placeholder="Username*" required="">
+                                                            <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" placeholder="First Name" value="{{ old('name') }}" required autocomplete="name" autofocus >
                                                         </div>
                                                         <div class="form-group form-group-half form-group-icon">
                                                             <i class="ti-info-alt toltip-content" data-tipso="name"></i>
-                                                            <input type="text" name="nickname" value="" class="form-control sl-form-control" placeholder="Nickname*" required="">
+                                                            <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name*">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" name="email" value="" class="form-control sl-form-control" placeholder="Email*" required="">
+                                                            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email">
+                                                            @error('email')
+                                                                <span class="invalid-feedback" role="alert">
+                                                                    <strong>{{ $message }}</strong>
+                                                                </span>
+                                                            @enderror
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                            <input type="text" name="name" value="" class="form-control sl-form-control" placeholder="First Name*" required="">
+                                                            <input type="date" id="birthday" name="birthday" class="form-control" placeholder="dd/mm/yyyy">
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                            <input type="text" name="name" value="" class="form-control sl-form-control" placeholder="Last Name*" required="">
+                                                            <select class="form-control custom-select" name="gender" id="gender">
+                                                                <option value="male">Male</option>
+                                                                <option value="female">Female</option>
+                                                                <option value="other">Other</option>
+                                                            </select>
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                           <div class="sl-select">
-                                                                <select>
-                                                                    <option value="" hidden="">Gender*</option>
-                                                                    <option value="Male">Male</option>
-                                                                    <option value="Female">Female</option>
-                                                                    <option value="Other">Other</option>
-                                                                </select>
-                                                            </div>
+                                                            <input type="text" id="address" name="address" placeholder="Address*" class="form-control" required>
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                            <input type="number" name="Phone" value="" class="form-control sl-form-control" placeholder="Phone*" required="">
+                                                            <input type="number" id="phone" name="phone" placeholder="Phone" class="form-control" required>
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                            <input type="password" name="password" value="" class="form-control sl-form-control" placeholder="Password*" required="">
+                                                            <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                                                            @error('password')
+                                                            <span class="invalid-feedback" role="alert">
+                                                                <strong>{{ $message }}</strong>
+                                                            </span>
+                                                            @enderror
                                                         </div>
                                                         <div class="form-group form-group-half">
-                                                            <input type="password" name="password" value="" class="form-control sl-form-control" placeholder="Retype Password*" required="">
+                                                            <input id="password-confirm" type="password" class="form-control" placeholder="Repeat Password" name="password_confirmation" required autocomplete="new-password">
                                                         </div>
                                                         <div class="form-group sl-btnarea">
                                                             <div class="sl-checkbox">
-                                                                <input id="terms2" type="checkbox" name="category">
-                                                                <label for="terms2">
+                                                                <input id="terms" type="checkbox" name="category">
+                                                                <label for="terms">
                                                                     <span>I agree to <a href="javascript:void(0);">Terms and Conditions</a></span>
                                                                 </label>
                                                             </div>

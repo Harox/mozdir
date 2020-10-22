@@ -1,7 +1,7 @@
 <?php
 
 Route::group(['namespace' => 'Provider'], function() {
-    Route::get('/', 'HomeController@index')->name('provider.dashboard');
+    Route::get('/', 'HomeController@index')->name('provider.home');
 
     // Login
     Route::get('login', 'Auth\LoginController@showLoginForm')->name('provider.login');

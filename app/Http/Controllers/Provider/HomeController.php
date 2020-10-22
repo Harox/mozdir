@@ -8,6 +8,7 @@ class HomeController extends Controller
 {
 
     protected $redirectTo = '/provider/login';
+    
 
     /**
      * Create a new controller instance.
@@ -17,6 +18,7 @@ class HomeController extends Controller
     public function __construct()
     {
         $this->middleware('provider.auth:provider');
+        
     }
 
     /**
@@ -27,5 +29,7 @@ class HomeController extends Controller
     public function index() {
         return view('provider.home');
     }
+
+    
 
 }
