@@ -3,7 +3,7 @@
 @section('content')
 
 
-<div class="login-register" style="background-image:url({{ asset('storage/images/loginwall.jpg') }}); background-repeat: repeat;">        
+<div class="login-register" style="background-image:url({{ asset('storage/images/logingradient.jpg') }}); background-repeat: repeat;">        
     <div class="login-box card">
         <div class="card-header">{{ __('Login') }}</div>
     <div class="card-body">
