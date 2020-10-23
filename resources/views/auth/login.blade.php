@@ -2,8 +2,7 @@
 
 @section('content')
 
-
-<div class="login-register" style="background-image:url({{ asset('storage/images/registerwall.jpg') }}); background-repeat: repeat;">        
+<div class="login-register" style="background-image:url({{ asset('storage/images/registerwall.jpg') }}); ">        
     <div class="login-box card">
     <div class="card-body">
         <form class="form-horizontal form-material" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">

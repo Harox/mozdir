@@ -21,8 +21,8 @@
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="/company" aria-expanded="false"><i class="fa fa-database"></i><span class="hide-menu">My Company</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="campany">manage campany</a></li>
-                        <li><a href="companies">my companies</a></li>
+                        <li><a href={{ route('provider.company') }} >Manage Campany</a></li>
+                        <li><a href="companies">My Companies</a></li>
                     </ul>
                 </li>
 
@@ -34,8 +34,8 @@
                 </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-bolt"></i><span class="hide-menu">Appointment</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="service">all appointment</a></li>
-                        <li><a href="categorie">manage time slots</a></li>
+                        <li><a href="service">All Appointment</a></li>
+                        <li><a href="categorie">Manage Time Slots</a></li>
                     </ul>
                 </li>
 

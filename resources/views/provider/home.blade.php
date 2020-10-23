@@ -125,6 +125,9 @@
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="card">
+                                    <div class="card-header">
+                                    <h4 class="card-title">Last Services Provided</h4>
+                                    </div>
                                         <div class="card-body">
                                             <select class="custom-select pull-right">
                                                 <option selected>January</option>
@@ -132,15 +135,15 @@
                                                 <option value="2">March</option>
                                                 <option value="3">April</option>
                                             </select>
-                                            <h4 class="card-title">Projects of the Month</h4>
+                                            
                                             <div class="table-responsive m-t-20">
                                                 <table class="table stylish-table">
                                                     <thead>
                                                         <tr>
-                                                            <th colspan="2">Assigned</th>
-                                                            <th>Name</th>
-                                                            <th>Priority</th>
-                                                            <th>Budget</th>
+                                                            <th colspan="2">Service</th>
+                                                            <th>Customer</th>
+                                                            <th>Duration</th>
+                                                            <th>Price</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>

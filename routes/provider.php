@@ -22,4 +22,11 @@ Route::group(['namespace' => 'Provider'], function() {
     Route::get('email/resend','Auth\VerificationController@resend')->name('provider.verification.resend');
     Route::get('email/verify','Auth\VerificationController@show')->name('provider.verification.notice');
     Route::get('email/verify/{id}/{hash}','Auth\VerificationController@verify')->name('provider.verification.verify');
+
+    //Company
+    Route::get('company', 'ProviderController@showCompanies')->name('provider.company');
+    
 });
+
+
+
