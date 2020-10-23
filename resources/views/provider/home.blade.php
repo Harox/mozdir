@@ -153,7 +153,7 @@
                                                             <td>$3.9K</td>
                                                         </tr>
                                                         <tr class="active">
-                                                            <td><span class="round"><img src="../assets/images/users/2.jpg" alt="user" width="50" /></span></td>
+                                                            <td><span class="round"><img src={{ asset('assets/images/users/2.jpg') }} alt="user" width="50" /></span></td>
                                                             <td>
                                                                 <h6>Andrew</h6><small class="text-muted">Project Manager</small></td>
                                                             <td>Real Homes</td>
@@ -200,9 +200,9 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <!-- Column -->
-                                    <div class="card"> <img class="" src="../assets/images/background/profile-bg.jpg" alt="Card image cap">
+                                    <div class="card"> <img class="" src={{ asset('assets/images/background/profile-bg.jpg') }} alt="Card image cap">
                                         <div class="card-body little-profile text-center">
-                                            <div class="pro-img"><img src="../assets/images/users/4.jpg" alt="user" /></div>
+                                            <div class="pro-img"><img src={{ asset('assets/images/users/4.jpg') }} alt="user" /></div>
                                             <h3 class="m-b-0">Angela Dominic</h3>
                                             <p>Web Designer &amp; Developer</p>
                                             <p><small>Lorem ipsum dolor sit amet, this is a consectetur adipisicing elit</small></p> <a href="javascript:void(0)" class="m-t-10 waves-effect waves-dark btn btn-primary btn-md btn-rounded">Follow</a>
@@ -294,13 +294,13 @@
                                                 <div class="message-widget contact-widget">
                                                     <!-- Message -->
                                                     <a href="#">
-                                                        <div class="user-img"> <img src="../assets/images/users/1.jpg" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                        <div class="user-img"> <img src={{ asset('assets/images/users/1.jpg') }} alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
                                                         <div class="mail-contnet">
                                                             <h5>Pavan kumar</h5> <span class="mail-desc">info@wrappixel.com</span></div>
                                                     </a>
                                                     <!-- Message -->
                                                     <a href="#">
-                                                        <div class="user-img"> <img src="../assets/images/users/2.jpg" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                        <div class="user-img"> <img src={{ asset('assets/images/users/2.jpg') }} alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
                                                         <div class="mail-contnet">
                                                             <h5>Sonu Nigam</h5> <span class="mail-desc">pamela1987@gmail.com</span></div>
                                                     </a>
@@ -312,7 +312,7 @@
                                                     </a>
                                                     <!-- Message -->
                                                     <a href="#">
-                                                        <div class="user-img"> <img src="../assets/images/users/4.jpg" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                        <div class="user-img"> <img src={{ asset('assets/images/users/4.jpg') }} alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
                                                         <div class="mail-contnet">
                                                             <h5>Pavan kumar</h5> <span class="mail-desc">kat@gmail.com</span></div>
                                                     </a>

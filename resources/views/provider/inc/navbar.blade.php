@@ -52,7 +52,7 @@
                                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                                     <div class="carousel-inner" role="listbox">
                                         <div class="carousel-item active">
-                                            <div class="container"> <img class="d-block img-fluid" src={{ asset('assets/images/big/img1.jpg') }}alt="First slide"></div>
+                                            <div class="container"> <img class="d-block img-fluid" src={{ asset('assets/images/big/img1.jpg') }} alt="First slide"></div>
                                         </div>
                                         <div class="carousel-item">
                                             <div class="container"><img class="d-block img-fluid" src={{ asset('assets/images/big/img2.jpg') }} alt="Second slide"></div>
