@@ -3,13 +3,13 @@
 @section('content')
 
 
-<div class="login-register" style="background-image:url({{ asset('storage/images/logingradient.jpg') }}); background-repeat: repeat;">        
+<div class="login-register" style="background-image:url({{ asset('storage/images/registerwall.jpg') }}); background-repeat: repeat;">        
     <div class="login-box card">
-        <div class="card-header">{{ __('Login') }}</div>
     <div class="card-body">
         <form class="form-horizontal form-material" method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
             @csrf
-            <h3 class="box-title m-b-20">Sign In</h3>
+            <a class="text-center db"><img src={{asset('front/images/register/logo.png')}} alt="Home">
+            </a>
             <div class="form-group ">
                 <div class="col-xs-12">
                     <input id="email" placeholder="Email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
