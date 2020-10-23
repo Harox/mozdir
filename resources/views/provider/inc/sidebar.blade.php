@@ -28,14 +28,14 @@
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="/service" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">Services</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="manage service">All Services</a></li>
-                        <li><a href="manage prices">Categories</a></li>
+                        <li><a href={{ route('provider.service') }}>Manage Services</a></li>
+                        <li><a href={{ route('provider.company') }}>Manage Prices</a></li>
                     </ul>
                 </li>
                 <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-bolt"></i><span class="hide-menu">Appointment</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="service">All Appointment</a></li>
-                        <li><a href="categorie">Manage Time Slots</a></li>
+                        <li><a href={{ route('provider.appointment') }}>All Appointment</a></li>
+                        <li><a href={{ route('provider.company') }}>Manage Time Slots</a></li>
                     </ul>
                 </li>
 
@@ -44,18 +44,18 @@
 
                 <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Packages & Payouts</span></a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="service">Packages</a></li>
-                        <li><a href="categorie">Payouts</a></li>
+                        <li><a href={{ route('provider.pacakage') }}>Packages</a></li>
+                        <li><a href={{ route('provider.company') }}>Payouts</a></li>
                     </ul>
                 </li>
 
-                <li> <a class=" waves-effect waves-dark" href="vendor" aria-expanded="false"><i class="fa  fa-bell-o"></i><span class="hide-menu">Notification</span></a>
+                <li> <a class=" waves-effect waves-dark" href={{ route('provider.notification') }} aria-expanded="false"><i class="fa  fa-bell-o"></i><span class="hide-menu">Notification</span></a>
                 </li>
 
-                <li> <a class="waves-effect waves-dark" href="manufactor" aria-expanded="false"><i class="fa fa-cog"></i><span class="hide-menu">Account & Privacy</span></a>
+                <li> <a class="waves-effect waves-dark" href={{ route('provider.account') }} aria-expanded="false"><i class="fa fa-cog"></i><span class="hide-menu">Account & Privacy</span></a>
                 </li>
 
-                <li> <a class="waves-effect waves-dark" href="user" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a>
+                <li> <a class="waves-effect waves-dark" href={{ route('provider.profile') }} aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a>
                 </li>
 
             </ul>
