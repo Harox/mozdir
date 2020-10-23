@@ -19,36 +19,43 @@
                 <li class="nav-small-cap">PERSONAL</li>
                 <li> <a class="waves-effect waves-dark" href="home" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard </span></a>
 
+                <li> <a class="has-arrow waves-effect waves-dark" href="/company" aria-expanded="false"><i class="fa fa-database"></i><span class="hide-menu">My Company</span></a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li><a href="campany">manage campany</a></li>
+                        <li><a href="companies">my companies</a></li>
+                    </ul>
+                </li>
+
                 <li> <a class="has-arrow waves-effect waves-dark" href="/service" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">Services</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="manage service">All Services</a></li>
                         <li><a href="manage prices">Categories</a></li>
                     </ul>
                 </li>
-                <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">Appointment</span></a>
+                <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-bolt"></i><span class="hide-menu">Appointment</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="service">all appointment</a></li>
                         <li><a href="categorie">manage time slots</a></li>
                     </ul>
                 </li>
 
-                <li> <a class=" waves-effect waves-dark" href="inbox" aria-expanded="false"><i class="fa fa-suitcase"></i><span class="hide-menu">Inbox</span></a>
+                <li> <a class=" waves-effect waves-dark" href="inbox" aria-expanded="false"><i class="fa fa-envelope-o"></i><span class="hide-menu">Inbox</span></a>
                 </li>
 
-                <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-gears"></i><span class="hide-menu">Packages & Payouts</span></a>
+                <li> <a class="has-arrow waves-effect waves-dark" href="/appointment" aria-expanded="false"><i class="fa fa-money"></i><span class="hide-menu">Packages & Payouts</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li><a href="service">Packages</a></li>
                         <li><a href="categorie">Payouts</a></li>
                     </ul>
                 </li>
 
-                <li> <a class=" waves-effect waves-dark" href="vendor" aria-expanded="false"><i class="fa fa-truck"></i><span class="hide-menu">Notification</span></a>
+                <li> <a class=" waves-effect waves-dark" href="vendor" aria-expanded="false"><i class="fa  fa-bell-o"></i><span class="hide-menu">Notification</span></a>
                 </li>
 
-                <li> <a class="waves-effect waves-dark" href="manufactor" aria-expanded="false"><i class="mdi mdi-worker"></i><span class="hide-menu">Account & Privacy</span></a>
+                <li> <a class="waves-effect waves-dark" href="manufactor" aria-expanded="false"><i class="fa fa-cog"></i><span class="hide-menu">Account & Privacy</span></a>
                 </li>
 
-                <li> <a class="waves-effect waves-dark" href="user" aria-expanded="false"><i class="fa fa-users"></i><span class="hide-menu">Profile</span></a>
+                <li> <a class="waves-effect waves-dark" href="user" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Profile</span></a>
                 </li>
 
             </ul>
